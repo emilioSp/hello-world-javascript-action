@@ -3,6 +3,8 @@ const github = require('@actions/github');
 const { Octokit } = require('@octokit/rest');
 const { execSync } = require('child_process');
 
+console.log('c9aooo');
+
 try {
   // `who-to-greet` input defined in action metadata file
   const message = core.getInput('message');
