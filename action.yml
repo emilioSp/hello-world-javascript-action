@@ -1,13 +1,12 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
-  message:  # id of input
-    description: 'Message'
+  command:
+    description: 'Test command'
+    default: 'npm run test'
+  GITHUB_TOKEN:
+    description: 'Github token of the repository'
     required: true
-    default: 'Ciao!'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
 runs:
   using: 'node12'
   main: 'index.js'
