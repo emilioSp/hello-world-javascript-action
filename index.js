@@ -3,8 +3,6 @@ const { context } = require('@actions/github');
 const { Octokit } = require('@octokit/rest');
 const { execSync } = require('child_process');
 
-console.log('c9aooo');
-
 (async() => {
   try {
     const command = core.getInput('command');
@@ -22,7 +20,7 @@ console.log('c9aooo');
     });
 
     // Create a new Comment
-    const c  = await octokit.issues.createComment({
+    await octokit.issues.createComment({
       ...context.repo,
       issue_number: context.payload.pull_request.number,
       body: results
