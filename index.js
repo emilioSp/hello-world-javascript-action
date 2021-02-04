@@ -1,6 +1,6 @@
-import core from '@actions/core';
-import github from '@actions/github';
-import { execSync } from 'child_process';
+const core = require('@actions/core');
+// import github from '@actions/github';
+const { execSync } = require('child_process');
 
 try {
   // `who-to-greet` input defined in action metadata file
